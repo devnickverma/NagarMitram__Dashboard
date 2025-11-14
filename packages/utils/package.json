@@ -1,0 +1,57 @@
+{
+  "name": "@de/utils",
+  "version": "0.1.0",
+  "description": "Utility functions and helpers for DE frontends",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./chat": {
+      "types": "./dist/chat-interface-types/index.d.ts",
+      "import": "./dist/chat-interface-types/index.mjs",
+      "require": "./dist/chat-interface-types/index.js"
+    },
+    "./lib": {
+      "types": "./dist/lib/index.d.ts", 
+      "import": "./dist/lib/index.mjs",
+      "require": "./dist/lib/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run --reporter=verbose",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "analyze": "tsup --metafile && echo 'Bundle analysis complete'",
+    "clean": "rm -rf dist .turbo storybook-static coverage"
+  },
+  "dependencies": {
+    "@de/core": "workspace:*",
+    "@de/types": "workspace:*",
+    "axios": "^1.6.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
