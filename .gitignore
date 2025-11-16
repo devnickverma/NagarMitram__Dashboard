@@ -19,3 +19,4 @@ coverage/
 
 # optional large files
 *.sqlite3
+.env.local
