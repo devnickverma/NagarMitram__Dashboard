@@ -8,7 +8,7 @@ yarn-error.log*
 pnpm-lock.yaml
 
 # Env / OS / editor
-.env
+.env.local
 .DS_Store
 .vscode/
 .idea/
