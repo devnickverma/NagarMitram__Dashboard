@@ -31,6 +31,8 @@
 
 Open Terminal and run:
 
+
+
 ```bash
 cd /Users/Sadique/CivicIssue_adminpanel
 npm install
